@@ -12,63 +12,63 @@ import './App.css';
 
 const App = () => {
   return (
-    <Router>
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            
-            <li>
-              <Link to="/contact">
-                  Contact
-              </Link>
-            </li>
+      <Router>
+        <div>
+          <nav>
+            <ul>
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              
+              <li>
+                <Link to="/about">About</Link>
+              </li>
+              
+              <li>
+                <Link to="/contact">
+                    Contact
+                </Link>
+              </li>
 
-            <li>
-              <Link to="/blog/1">Blog Post 1</Link>
-            </li>
+              <li>
+                <Link to="/blog/1">Blog Post 1</Link>
+              </li>
 
-            <li>
-              <Link to="/blog/2">Blog Post 2</Link>
-            </li>
+              <li>
+                <Link to="/blog/2">Blog Post 2</Link>
+              </li>
 
-            <li>
-              <Link to="/blog/3">Blog Post 3</Link>
-            </li>
+              <li>
+                <Link to="/blog/3">Blog Post 3</Link>
+              </li>
 
-            <li>
-              <Link to="/blog/4">Blog Post 4</Link>
-            </li>
-          </ul>
-        </nav>
+              <li>
+                <Link to="/blog/4">Blog Post 4</Link>
+              </li>
+            </ul>
+          </nav>
 
-        <Routes>
-          <Route path="/" element={<Home />} />
+          <Routes>
+            <Route path="/" element={<Home />} />
 
-          {/* We are about to do a nested routing for the About page */}
-          <Route path="/about" element={<About />}>
-            <Route index element={<Mission />} />
-            <Route path="mission" element={<Mission />}/>
-            <Route path="vision" element={<Vision />} />
-            <Route path="open-hours" element={<OpenHours />} />
-          </Route>
+            {/* We are about to do a nested routing for the About page */}
+            <Route path="/about" element={<About />}>
+              <Route index element={<Mission />} />
+              <Route path="mission" element={<Mission />}/>
+              <Route path="vision" element={<Vision />} />
+              <Route path="open-hours" element={<OpenHours />} />
+            </Route>
 
-          <Route path="/contact" element={<Contact />} />
+            <Route path="/contact" element={<Contact />} />
 
-          {/* Dynamic routing for the blog component */}
-          <Route path="/blog/:postId" element={<Blog />} />
+            {/* Dynamic routing for the blog component */}
+            <Route path="/blog/:postId" element={<Blog />} />
 
-          {/* This is the 404 page */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </div>
-    </Router>
+            {/* This is the 404 page */}
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </div>
+      </Router>
   );
 };
 
