@@ -1,0 +1,22 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+
+.active-link {
+  color: red; /* Change this to your desired active link color */
+  font-weight: bold; /* Add any other styles you want for the active link */
+}
+
+
+
+
+
+
+
+
+
+
